@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+
+  <a id="top"></a>
+
+  <header>
+    <div class="flex justify-center py-16">
+      <a href="index.html">
+        <img src="./img/logo.svg" width="240" height="215" alt="Estelle et Pierre-Antoine - 27 août 2022" class="logo">
+      </a>
+    </div>
+    <div class="navigation">
+      {% include "nav.njk" %}
+    </div>
+  </header>
+
+  <main class="container mx-16 md:mx-36 lg:mx-auto">
+    {{ content | safe }}
+  </main>
+
+  <footer>
+    {% include "footer.njk" %}
+  </footer>
+
+</body>
+</html>

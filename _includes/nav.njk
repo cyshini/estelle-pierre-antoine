@@ -1,0 +1,18 @@
+<div class="container lg:mx-auto mx-36 my-20">
+  <nav>
+    <ul class="grid sm:grid-cols-2 md:grid-cols-4 gap-16">
+      <li class="text-center text-uppercase">
+        <a href="index.html" class="{{ '' if '/lodging' in page.url or '/rsvp' in page.url else 'active' }}">Accueil</a>
+      </li>
+      <li class="text-center text-uppercase">
+        <a href="lodging.html" class="{{ 'active' if '/lodging' in page.url }}">Hébergements</a>
+      </li>
+      <li class="text-center text-uppercase">
+        <a href="rsvp.html" class="{{ 'active' if '/rsvp' in page.url }}">Votre réponse</a>
+      </li>
+      <li class="text-center text-uppercase">
+        <a href="https://www.youtube.com/watch?v=oavMtUWDBTM" target="_blank">Liste de mariage</a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,98 @@
+/*
+ * basic button component
+ */
+/*
+ * HTML template example:
+ * preferably use <button> for buttons !
+ * use .button or .btn (for structure) and .btn-- (for variants) (see appearance mixin)
+ */
+
+/*
+ * button reset
+ */
+
+%btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacer-medium $spacer-large;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.25s;
+  transition-property: box-shadow, background-color, color, border;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  color: $white;
+  background: $color-blue-2;
+  font-weight: 600;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  border-radius: $radius-small;
+  box-shadow:
+  0.1px 0.2px 0.4px rgba(0, 0, 0, 0.064),
+  0.3px 0.5px 1.1px rgba(0, 0, 0, 0.070),
+  0.6px 1.2px 2.7px rgba(0, 0, 0, 0.076),
+  2px 4px 9px rgba(0, 0, 0, 0.09)
+  ;
+}
+
+.btn,
+.button {
+  @extend %btn;
+
+  &:focus {
+    -webkit-tap-highlight-color: transparent;
+    color: $white;
+  }
+
+  &:hover {
+    background: $color-blue-1;
+    color: $white;
+    box-shadow:
+    0.4px 0.4px 0.7px rgba(0, 0, 0, 0.061),
+    1.1px 1.1px 1.6px rgba(0, 0, 0, 0.066),
+    2px 2px 3px rgba(0, 0, 0, 0.02),
+    3.6px 3.6px 5.4px rgba(0, 0, 0, 0.074),
+    6.7px 6.7px 10px rgba(0, 0, 0, 0.079),
+    16px 16px 24px rgba(0, 0, 0, 0.09)
+    ;
+  }
+}
+
+// button state variants
+.btn,
+.button {
+  &--small {
+    padding: $spacer-tiny $spacer-small;
+    font-size: .8em;
+  }
+
+  &--big {
+    padding: $spacer-medium $spacer-large;
+    font-size: 1.4em;
+  }
+
+  &--block {
+    width: 100% !important;
+    display: block;
+  }
+
+  &--unstyled {
+    padding: 0;
+    border: none;
+    text-align: left;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}

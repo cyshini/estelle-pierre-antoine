@@ -1,0 +1,75 @@
+.logo {
+    @media (max-width: 992px) {
+        width: 200px;
+        height: 175px;
+    }
+}
+
+.gmap {
+    height: 480px;
+}
+
+.gform {
+    height: 800px;
+}
+
+.frame {
+    border: 8px solid $white;
+    box-shadow:
+    1.4px 2.8px 2.2px rgba(0, 0, 0, 0.011),
+    3.3px 6.7px 5.3px rgba(0, 0, 0, 0.016),
+    6.3px 12.5px 10px rgba(0, 0, 0, 0.02),
+    11.2px 22.3px 17.9px rgba(0, 0, 0, 0.024),
+    20.9px 41.8px 33.4px rgba(0, 0, 0, 0.029),
+    50px 100px 80px rgba(0, 0, 0, 0.04)
+    ;
+}
+
+nav ul {
+    & a {
+        font-size: 0.875rem;
+        letter-spacing: 0.25rem;
+        /*border-bottom: 1px solid transparent;
+        padding-bottom: 0.25rem;*/
+        transition: 0.25s;
+        transition-property: box-shadow, background-color, color, border;
+        text-decoration: none;
+    }
+    & a:hover {
+        /*border-color: $color-blue-1;*/
+        text-decoration: none;
+    }
+}
+
+a.active {
+    color: $color-blue-1;
+}
+
+a.card {
+    text-decoration: none;
+    color: $color-gamma;
+    font-weight: normal;
+    display: block;
+    background: $white;
+    border-radius: $radius-small;
+    padding: 1rem 1.5rem;
+    transition: 0.25s;
+    transition-property: box-shadow, background-color, color, border;
+    box-shadow:
+    0.1px 0.2px 0.4px rgba(0, 0, 0, 0.014),
+    0.3px 0.5px 1.1px rgba(0, 0, 0, 0.02),
+    0.6px 1.2px 2.7px rgba(0, 0, 0, 0.026),
+    2px 4px 9px rgba(0, 0, 0, 0.04)
+    ;
+}
+a.card:hover {
+    color: $color-blue-1;
+    box-shadow:
+    0.4px 0.4px 0.7px rgba(0, 0, 0, 0.011),
+    1.1px 1.1px 1.6px rgba(0, 0, 0, 0.016),
+    2px 2px 3px rgba(0, 0, 0, 0.02),
+    3.6px 3.6px 5.4px rgba(0, 0, 0, 0.024),
+    6.7px 6.7px 10px rgba(0, 0, 0, 0.029),
+    16px 16px 24px rgba(0, 0, 0, 0.04)
+    ;
+}
