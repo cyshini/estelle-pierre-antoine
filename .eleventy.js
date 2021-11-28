@@ -1,12 +1,16 @@
 module.exports = function(eleventyConfig) {
+	
 	eleventyConfig.setBrowserSyncConfig({
-		files: './_site/css/**/*.css'
+		files: './docs/css/**/*.css'
 	});
 
 	eleventyConfig.addPassthroughCopy("img");
 
 	return {
-	  passthroughFileCopy: true
+		dir: {
+			output: "docs"
+		},
+		passthroughFileCopy: true
 	};
 
 };
