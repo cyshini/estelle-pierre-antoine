@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
+  <title>Liste de mariage</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,16 +22,44 @@
       </a>
     </div>
     <div class="navigation">
-      {% include "nav.njk" %}
+      <div class="container lg:mx-auto mx-36 my-20">
+  <nav>
+    <ul class="grid sm:grid-cols-2 md:grid-cols-4 gap-16">
+      <li class="text-center text-uppercase">
+        <a href="index.html" class="active">Accueil</a>
+      </li>
+      <li class="text-center text-uppercase">
+        <a href="lodging.html" class="">Hébergements</a>
+      </li>
+      <li class="text-center text-uppercase">
+        <a href="rsvp.html" class="">Votre réponse</a>
+      </li>
+      <li class="text-center text-uppercase">
+        <a href="list.html" class="active">Liste de mariage</a>
+      </li>
+    </ul>
+  </nav>
+</div>
     </div>
   </header>
 
   <main class="container mx-16 md:mx-36 lg:mx-auto">
-    {{ content | safe }}
+    
+<div class="sm:grid sm:grid-cols-1 md:grid-cols-2 gap-36">
+
+    <div>
+        <h1>Liste de mariage</h1>
+        <p>À venir prochainement...</p>
+    </div>
+
+    <div>
+    </div>
+
+</div>
   </main>
 
-  <footer class="{{ 'hidden' if '/list' in page.url }}">
-    {% include "footer.njk" %}
+  <footer class="hidden">
+    <a href="#top">Retour en haut de page</a>
   </footer>
 
 </body>
